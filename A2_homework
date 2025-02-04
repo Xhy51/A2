@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Visualization Assignment</title>
+  <style>
+    /* 简单排版，可根据需要调整 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #444;
+    }
+    img {
+      max-width: 500px; /* 限制图片显示宽度 */
+      display: block;
+      margin-bottom: 10px;
+    }
+    .viz-section {
+      margin-bottom: 50px; /* 分隔三个图表块 */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Data Visualization Assignment</h1>
+  <p>
+    Below, you'll find three different visualizations (Bar Chart, Dot Plot, and Heatmap) 
+    implemented in both p5.js and Tableau, all loading data from a CSV file.
+    <br>
+    We use the <strong>cars.csv</strong> dataset, which includes columns like 
+    <em>economy (mpg), cylinders, displacement, power, weight, etc.</em>
+  </p>
+
+  <!-- -------------- Bar Chart Section -------------- -->
+  <div class="viz-section">
+    <h2>1. Bar Chart</h2>
+    <p>
+      <strong>p5.js Version:</strong>
+      <br>
+      <a href="https://vizhub.com/yourUsername/yourBarChartID" target="_blank">
+        View Bar Chart in VizHub
+      </a>
+      <br>
+      (If you have a local p5.js sketch, you could also provide a link or embed it here.)
+    </p>
+
+    <p>
+      <strong>Tableau Version:</strong>
+      <br>
+      Below is a screenshot of my Bar Chart created in Tableau.
+    </p>
+    <img src="tableau_bar_chart.png" alt="Bar Chart Screenshot from Tableau">
+    
+    <p>
+      <em>Explanation:</em> This bar chart uses <strong>economy (mpg)</strong> as a single variable 
+      and shows each vehicle model on the x-axis. The p5.js version reads the <code>cars.csv</code> 
+      file using <code>loadTable()</code> and draws a bar for each row. In Tableau, I've 
+      done the same by placing <em>name</em> on the Rows and <em>economy (mpg)</em> on the Columns,
+      selecting a Bar Mark type.
+    </p>
+  </div>
+
+  <!-- -------------- Dot Plot Section -------------- -->
+  <div class="viz-section">
+    <h2>2. Dot Plot</h2>
+    <p>
+      <strong>p5.js Version:</strong>
+      <br>
+      <a href="https://vizhub.com/yourUsername/yourDotPlotID" target="_blank">
+        View Dot Plot in VizHub
+      </a>
+      <br>
+      (Alternatively, link to your own GitHub Pages or local p5 sketch.)
+    </p>
+
+    <p>
+      <strong>Tableau Version:</strong>
+      <br>
+      <img src="tableau_dot_plot.png" alt="Dot Plot Screenshot from Tableau">
+    </p>
+    <p>
+      <em>Explanation:</em> The dot plot also uses the same <code>cars.csv</code> data, 
+      but we represent each car's <strong>economy (mpg)</strong> as a single dot 
+      on a horizontal axis. In Tableau, I placed <em>name</em> on Rows and 
+      <em>economy (mpg)</em> on Columns, then changed the Mark to <strong>Circle</strong>.
+      This meets the B-level requirement of having a dot plot for the same variable.
+    </p>
+  </div>
+
+  <!-- -------------- Heatmap Section -------------- -->
+  <div class="viz-section">
+    <h2>3. Heatmap</h2>
+    <p>
+      <strong>p5.js Version:</strong>
+      <br>
+      <a href="https://vizhub.com/yourUsername/yourHeatmapID" target="_blank">
+        View Heatmap in VizHub
+      </a>
+    </p>
+
+    <p>
+      <strong>Tableau Version:</strong>
+      <br>
+      <img src="tableau_heatmap.png" alt="Heatmap Screenshot from Tableau">
+    </p>
+    <p>
+      <em>Explanation:</em> This heatmap aggregates the data by 
+      <strong>year</strong> and <strong>cylinders</strong>, showing the average 
+      <em>economy (mpg)</em> in color. In my p5.js code, I use 
+      <code>table.getNum(r, 'year')</code> and <code>table.getNum(r, 'cylinders')</code> 
+      to group the data, then compute the average mpg. In Tableau, I put 
+      <em>year</em> on Rows and <em>cylinders</em> on Columns, dragged 
+      <em>economy (mpg)</em> to Color, and selected <strong>Heat Map</strong>.
+      This meets the A-level requirement.
+    </p>
+  </div>
+
+  <!-- -------------- A+ Requirements (Optional) -------------- -->
+  <div class="viz-section">
+    <h2>A+ Requirements</h2>
+    <p>
+      We also used a <strong>log scale</strong> in the Dot Plot p5.js example to handle the
+      range of weights. Additionally, we incorporated <strong>tooltips</strong> 
+      (hover interaction) in the bar chart p5.js code, so when you hover over a bar, 
+      it shows details like car name and mpg. Check out the sketches above!
+    </p>
+  </div>
+
+  <!-- -------------- End of the page -------------- -->
+  <hr>
+  <p>
+    <strong>Hosted on GitHub Pages:</strong> 
+    <br>
+    You can view this website at:
+    <a href="https://yourusername.github.io/my-visualizations/" target="_blank">
+      https://yourusername.github.io/my-visualizations/
+    </a>
+  </p>
+
+</body>
+</html>
